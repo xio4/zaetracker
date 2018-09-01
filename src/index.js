@@ -5,12 +5,12 @@ const chalk = require('chalk');
 const { loadConfig, terminate } = require('./utils');
 const { program } = require('./env');
 const { invoke } = require('./commands');
-const { CMD, CMD_ARGS } = require('./constants');
+const { CFG_PATH, CMD, CMD_ARGS } = require('./constants');
 const { init: initZaebutton, findProject } = require('./api/zaebutton.js');
 const { init: initJira, getCurrentUser } = require('./api/jira');
 
 const main = async () => {
-    let config = await loadConfig();
+    let config = await loadConfig(program[CFG_PATH]);
 
     initZaebutton(config);
     initJira(config);

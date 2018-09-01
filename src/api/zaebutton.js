@@ -46,8 +46,7 @@ class ZaebuttonClient {
     }
 
     getWorklog({ worklogId }) {
-        return this.get(`worklogs/${worklogId}`)
-            .catch(e => console.log(e));
+        return this.get(`worklogs/${worklogId}`);
     }
 
     getWorklogs({ workspaceId, startDate, endDate, limit = 1000 }) {

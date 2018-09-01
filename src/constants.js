@@ -31,9 +31,11 @@ const cmds = {
 const VERSION = '0.1.0';
 const CMD = 'cmd';
 const CMD_ARGS = 'cmdargs';
+const CFG_PATH = 'cfg';
 
 module.exports = {
     CANCEL_CODE,
+    CFG_PATH,
     CMD,
     CMD_ARGS,
     CONFIG_FILE_NAME,

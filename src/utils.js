@@ -120,7 +120,7 @@ const showTimeEntry = (config = defaultProjectConfig, zWorklog) => {
 const loadConfig = (fn = CONFIG_PATH) => readFile(fn)
     .catch(({ message }) => {
         showError(message);
-        showWarning(`Can't open config file, attempt to create it in ${CONFIG_PATH}`);
+        showWarning(`Can't open config file, attempt to create it in ${fn}`);
         const rawConfig = JSON.stringify(defaultProjectConfig, null, SPACE_DELIM);
 
         return writeFile(fn, rawConfig)
